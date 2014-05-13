@@ -1,6 +1,8 @@
 #################
 ## Eclipse
 #################
+app/foo.db
+
 
 *.pydevproject
 .project
