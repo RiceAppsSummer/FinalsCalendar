@@ -15,8 +15,9 @@ def courses():
 	courses = db.session.query(Course,Exam.teacher).join(Course.exams).group_by(Exam.teacher)
 	print list(courses)
 	for course in courses:
-		course_name = str(course)
-		mapping[course_name] = {}
+		course_name = str(course[0])
+		mapping[course_name] = {str(course[1])}
+
 		# print course.exams.group_by(Exam.teacher)
 		
 	
