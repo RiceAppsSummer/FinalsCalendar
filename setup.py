@@ -24,6 +24,18 @@ def setup_fake():
 def setup_schedule():
     unaltered_sched = download.strip_schedule()
     for item in unaltered_sched:
+        if item["type"] != "Scheduled":
+            continue
+        
+        if "date" not in item:
+            item["date"] = "Bad time parse"
+            print "Bad Time"
+            print item
+            continue
+        if "room" not in item:
+            item["room"] = "Room incorrectly parsed"
+            print item
+
         course_array = item["course"].split(" ")
         course = db.session.query(Course).filter_by(department_name = course_array[0], number = course_array[1]).first()
         if course is None:
@@ -52,6 +64,8 @@ def setup_schedule():
         time_array = map(process_time,item["time"].split(" - "))
         start_time,end_time = time_array
         
+
+
 
 
 

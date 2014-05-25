@@ -67,7 +67,7 @@ def process_pdf(file_handle):
     rsrcmgr = PDFResourceManager()
     device = PDFPageAggregator(rsrcmgr,laparams=LAParams(char_margin=1.0))
     interpreter = PDFPageInterpreter(rsrcmgr, device)
-    for page in list(PDFPage.create_pages(document))[:2]:
+    for page in list(PDFPage.create_pages(document)):
         interpreter.process_page(page)
         layout = device.get_result()
         text_positions = get_text_positions(layout)
@@ -120,4 +120,4 @@ def strip_schedule():
 
 
 if __name__ == "__main__":
-	print list(strip_schedule())[0]
+    print list(strip_schedule())
