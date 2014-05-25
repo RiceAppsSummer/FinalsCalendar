@@ -24,7 +24,7 @@ def setup_fake():
 def setup_schedule():
     unaltered_sched = download.strip_schedule()
     for item in unaltered_sched:
-        if item["type"] != "Scheduled":
+        if item["type"] not in ("Scheduled","^Scheduled"):
             continue
         
         if "date" not in item:

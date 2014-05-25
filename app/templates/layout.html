@@ -20,24 +20,14 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
     </script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
     <script src="static/js/bootstrap.min.js"></script>
 
     <link rel='stylesheet' type='text/css' href='static/fullcalendar/fullcalendar.css' />
     <script type='text/javascript' src='static/fullcalendar/fullcalendar.js'></script>
 
-    <script type="text/javascript">
-      $(document).ready(function() {
-
-        // page is now ready, initialize the calendar...
-
-        $('#calendar').fullCalendar({
-        // put your options and callbacks here
-          // defaultView: "agendaWeek"
-        })
-
-    });
-
-    </script>
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -94,11 +84,11 @@
 
         <div class="row">
           <div class="col-md-3 col">
-            <input type="text" class="form-control" placeholder="Text input">
+            <input type="text" class="form-control" placeholder="Text input" id = "coursenumber">
           </div>
 
           <div class="col-md-3 col">
-            <select class="form-control">
+            <select class="form-control" id = "teacher">
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -107,7 +97,7 @@
             </select>
           </div>
           <div class="col-md-3 col">
-            <select class="form-control">
+            <select class="form-control" id = "section">
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -141,6 +131,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="static/js/main.js"></script>
 
   </body>
 </html>
