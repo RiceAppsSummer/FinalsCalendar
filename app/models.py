@@ -7,6 +7,12 @@ class Course(db.Model):
     department_name = db.Column(db.String,nullable=False)
     number = db.Column(db.String,nullable=False)
 
+    def __str__(self):
+        return self.department_name+" "+self.number
+
+    def __repr__(self):
+        return str(self)    
+
 class Exam(db.Model):
     __tablename__ = 'exams'
     

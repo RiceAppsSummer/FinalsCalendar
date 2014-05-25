@@ -120,4 +120,4 @@ def strip_schedule():
 
 
 if __name__ == "__main__":
-	print list(strip_schedule())
+	print list(strip_schedule())[0]
