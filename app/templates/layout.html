@@ -26,6 +26,7 @@
     <script src="static/js/bootstrap.min.js"></script>
 
     <link rel='stylesheet' type='text/css' href='static/fullcalendar/fullcalendar.css' />
+    <script type='text/javascript' src='static/fullcalendar/moment.min.js'></script>
     <script type='text/javascript' src='static/fullcalendar/fullcalendar.js'></script>
 
 
@@ -84,7 +85,7 @@
 
         <div class="row">
           <div class="col-md-3 col">
-            <input type="text" class="form-control" placeholder="Text input" id = "coursenumber">
+            <input type="text" class="form-control" placeholder="Type in a course" id = "coursenumber">
           </div>
 
           <div class="col-md-3 col">
@@ -114,12 +115,7 @@
         </div>
         <div class="col-md-3">
           <div class = "courses">Courses</div>
-          <ul class="list-group">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
+          <ul class="list-group" id = "currentCourses">
          </ul>
         </div>
       </div> 
