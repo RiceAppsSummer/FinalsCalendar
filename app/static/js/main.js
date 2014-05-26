@@ -17,6 +17,8 @@ $(document).ready(function(){
 
 	    });
 	    $("#coursenumber").keyup(function(){
+
+	    	// Triggers #teacher from #coursename
 	    	var course = $("#coursenumber").val();
 	    	if(courses.hasOwnProperty(course)){
 	    		$("#teacher").empty();
@@ -25,6 +27,20 @@ $(document).ready(function(){
 	    			$("#teacher").append(option);
 	    		}
 	    		$("#teacher").prop('disabled', false);
+
+
+	    		// Triggers #section from #teacher
+	    		$("#teacher").change(function(){
+		    		var instructor = $("#teacher").val()
+		    		$("#section").empty();
+		    		for (section in courses[course][instructor]){
+		    			var option = $('<option></option>').attr("value",section).text(section);
+		    			$("#section").append(option);
+		    		}
+		    		$("#section").prop('disabled', false);	    			
+
+	    		})
+
 	    	} 
 	    	
 	    });
