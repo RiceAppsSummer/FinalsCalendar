@@ -22,16 +22,7 @@ $(document).ready(function(){
 	    			var option = $('<option></option>').attr("value",teacher).text(teacher);
 	    			$("#teacher").append(option);
 	    		}
-	    		$("#teacher").prop('disabled', false);
-
-
-	    		var instructor = $("#teacher").val();
-	    		$("#section").empty();
-		    	for (section in courses[course][instructor]){
-		    		var option = $('<option></option>').attr("value",section).text(section);
-		    			$("#section").append(option);
-		    	}
-		    	$("#section").prop('disabled', false);	
+	    		$("#teacher").prop('disabled', false);   		
 
 	    		$("#teacher").on('change',function(){
 		    		var instructor = $("#teacher").val()	
@@ -42,7 +33,11 @@ $(document).ready(function(){
 		    		}
 
 
-	    		}) 
+	    		});
+
+	    		$("#section").prop('disabled', false);  
+	    		 
+	    		$("#teacher").change(); 
 
 	    	} 
 	    	
