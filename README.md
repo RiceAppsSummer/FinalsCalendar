@@ -2,6 +2,9 @@
 
 FinalSchedule is an app for Rice students to visualize their final schedules better.
 
+### Preview
+![ScreenShot](https://github.com/RiceAppsSummer/FinalsCalendar/raw/master/app/static/finalSchedule.png)
+
 ### Frontend Framework
 - [jQuery] FullCalendar
 - [BootStrap]
