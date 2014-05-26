@@ -2,7 +2,6 @@ from flask import render_template,jsonify
 from app import app,db
 import datetime
 import json
-import download
 from app.models import Course,Exam
 from collections import defaultdict
 
