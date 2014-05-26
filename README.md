@@ -16,4 +16,9 @@ FinalSchedule is an app for Rice students to visualize their final schedules bet
 - [SQLAlchemy]
 - [pdfMiner]
 
+### Usage
+- Install Flask
+- Setup venv 
+- python setup.py in command line
+- python runserver.py
 
