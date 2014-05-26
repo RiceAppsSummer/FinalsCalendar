@@ -12,11 +12,9 @@ $(document).ready(function(){
 		console.log(courses);
 		$("#coursenumber").prop('disabled', false);
 	    $("#coursenumber").autocomplete({
-	      	source: Object.keys(courses), 
-	      	
-
+	      	source: Object.keys(courses),   	
 	    });
-	    $("#coursenumber").keyup(function(){
+	    $("#coursenumber").on("keyup autocompleteclose",function(){
 	    	var course = $("#coursenumber").val();
 	    	if(courses.hasOwnProperty(course)){
 	    		$("#teacher").empty();
